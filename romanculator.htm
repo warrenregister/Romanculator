@@ -1,0 +1,616 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 5.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0062)./RomanCulator.htm -->
+<html>
+	<title>RomanCulator - Roman Numeral Web App</title>
+<head>
+	
+	<link href="./romanculator_files/masterroot.css" type="text/css" rel="stylesheet">
+    <script src="./romanculator_files/jquery-3.3.1.min.js"></script> 
+
+	
+	<!--<link href="./romanculator_files/tables.css" type="text/css" rel="stylesheet"> -->
+	
+	
+	
+	<link type="text/css" rel="stylesheet" href="./romanculator_files/theme.css">
+	<style>
+.image{
+margin: 0;
+width: 400;
+height: 463;
+overflow: hidden;
+align-content: center;  
+padding-left: 190px;
+padding 190px;
+}
+.wrapper{
+width: 400px;
+margin: 0 auto;
+background-color: #5E260F;
+height: 500;
+text-align: center;
+color: white;
+padding-top:3px;
+border-radius: 20px;
+bottom: 10px;
+align-content: left;
+font-family: 'Times New Roman', sans-serif ;
+}
+
+#screen{
+width: 90%;
+background-color: #b0b78e;
+border: 1px solid black;
+margin: 0 auto;
+line-height: 2;
+text-align:center;
+font-size: 40;
+padding: 0 0px 5px 0;
+height: 40px;
+font-family: 'Times New Roman', sans-serif ;
+}
+.miniscreen{
+width:20%;
+background-color: #b0b78e;
+border: 1px solid black;
+margin-left: 19px;
+margin-bottom: 5px;
+padding-left: 15px;
+line-height: 2;
+text-align:right;
+font-size: 40;
+text-shadow: 0px 1px 1px #4d4d4d;
+padding: 0px 10px 20px 0px;
+height: 20px;
+font-family: 'Times New Roman', sans-serif ;
+}
+
+.keypad{
+width: 90%;
+height: 220px;
+display:flex;
+margin: 10px auto;
+background-color:tan;
+justify-content: space-between;
+flex-wrap: wrap;
+background-color: burlywood;
+padding: 5px;
+border-radius: 5px;
+}
+
+.key{
+background-color: #404133;
+border: 3px solid black;
+border-radius: 3px;
+width: 60px;
+height: 50px;
+line-height: 50px;
+color: white;
+font-size: 1.5em;
+font: 'Museo700';
+text-shadow: 3px 3px 0px #2c2e38, 2px 2px 0px #5c5f72;	 }
+
+.key:hover{
+background-color: #303123;
+cursor: pointer; cursor: hand;
+}
+
+.special{
+background-color: #c8953c;
+}
+
+.special:hover{
+background-color: #b8852c;
+}
+
+#equals{
+width: 353px;
+background-color: black;
+font-size: 3em;
+font: 'Museo700';
+text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+}
+
+#equals:hover{
+background-color: red;
+}
+</style>
+    
+	
+<link rel="shortcut icon" href="./common_files/favicon.ico"><link rel="shortcut icon" href="./common_files/favicon.ico">
+</head>
+<body>
+
+<form name="aspnetForm" method="post" action="./romanculator_files/romanculator.htm" id="aspnetForm">
+<div>
+<input type="hidden" name="MSO_PageHashCode" id="MSO_PageHashCode" value="321">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUBMGRkcl7dYh+40hAtf81tcF46W+CqSYM=">
+</div>
+
+
+<script src="./romanculator_files/WebResource.axd" type="text/javascript"></script>
+	<table cellspacing="0" class="MS_MasterFrame" cellpadding="0" border="0">
+		<tbody><tr>
+			<td id="IWS_WH_Elem_GlobalLinks" class="MS_MasterGlobalLinks">
+				
+			</td>
+		</tr>
+		<tr>
+			<td id="IWS_WH_Elem_Header" class="MS_MasterHeader">
+				<table cellspacing="0" cellpadding="0" width="780" height="113" border="0" class="MSC_SiteWidth" style="border-bottom:2px solid #ffffff;clear:left">
+  <tbody><tr>
+    <td class="BG_Base" align="left" style="background-position: right; background-repeat: no-repeat;" background="./romanculator_files/1_325884_g37.jpg"><img align="left" src="./romanculator_files/RetroLogo.bmp" style="margin:0px 10px 0px 0px"><h2 id="IWS_WH_Elem_SiteTitle" class="MSC_HeaderText F_Light"><span style="font-weight: normal; font-size: 24pt; color: #ffffff; font-style: normal; font-family: Arial; text-decoration: ">RetroCalculators.com</span></h2>
+      <h5 id="IWS_WH_Elem_SiteDescription" class="MSC_HeaderDescription fgverydark"><span style="font-weight: normal; font-size: 18pt; color: #ffffff; font-style: normal; font-family: Arial; text-decoration: ">Reckon with Style!</span></h5>
+    </td>
+  </tr>
+</tbody></table>
+			</td>
+		</tr>
+		<tr style="">
+			<td id="IWS_WH_Elem_TopNav" class="MS_MasterPrimaryNav">
+				<table cellpadding="0" cellspacing="0" class="MSC_PrimaryNavFrame">
+  <tbody><tr>
+    <td class="MSC_PrimaryNavLinkFrame"><a href="./default.htm" class="MSC_PrimaryNavLink">Home</a></td>
+    <td name="IWS_Decodeable" class="MSC_PrimaryNavLeftSpace">&nbsp;</td>
+    <td name="IWS_Decodeable" class="MSC_PrimaryNavRightSpace">&nbsp;</td>
+    <td class="MSC_PrimaryNavLinkFrame"><a href="./guestbook.htm" class="MSC_PrimaryNavLink">Guest Book (say hello!)</a></td>
+    <td name="IWS_Decodeable" class="MSC_PrimaryNavLeftSpace">&nbsp;</td>
+    <td name="IWS_Decodeable" class="MSC_PrimaryNavRightSpace">&nbsp;</td>
+    <td class="MSC_PrimaryNavLinkFrame"><a href="./sitemap.htm" class="MSC_PrimaryNavLink">Site Map</a></td>
+    <td name="IWS_Decodeable" class="MSC_PrimaryNavLeftSpace">&nbsp;</td>
+    <td name="IWS_Decodeable" class="MSC_PrimaryNavRightSpace">&nbsp;</td>
+    <td class="MSC_PrimaryNavLinkFrame"><a href="./contact.htm" class="MSC_PrimaryNavLink">Contact Us</a></td>
+    <td name="IWS_Decodeable" class="MSC_PrimaryNavLeftSpace">&nbsp;</td>
+    <td name="IWS_Decodeable" class="MSC_PrimaryNavRightSpace">&nbsp;</td>
+    <td name="IWS_Decodeable" class="MSC_TopNavEnd">&nbsp;</td>
+  </tr>
+</tbody></table>
+			</td>
+		</tr>
+		<tr> 
+			<td>
+			<table cellspacing="0" cellpadding="0" border="0" style="width:100%"> <tbody><tr>
+                
+				<td id="IWS_WH_Elem_LeftNav" nowrap="true" class="MS_MasterLeftNav" style="width:0px">	
+				</td>
+                
+				<td class="MS_MasterBody">
+					<div id="IWS_WH_Elem_Content" class="MSC_Body">
+                        <p align="right"><font color="#606060"><a href="javascript:history.back()">Back</a>&nbsp;<font size="3" style="COLOR: rgb(49,5,0)"> </font>
+<head>
+    <script src="./romanculator_files/jquery-3.3.1.min.js"></script> 
+    <link type="text/css" rel="stylesheet" href="./romanculator_files/theme.css">
+</head>
+<div class = 'image' align = ' middle' id = 'image'>
+<img src = './romanculator_files/thumbsupsmall.png' alt = 'Thumbs up from Julius' id = 'julius images' align = 'middle'>
+</div>
+<div class="wrapper">
+	<h2>RomanCulator</h2>
+	<div id="miniscreen" class = 'miniscreen'>0</div>
+    <div id="screen" class = 'screen'>Nulla</div>
+	<div class="keypad">
+		<div class="key" id="num7">I</div>
+		<div class="key" id="num8">V</div>
+		<div class="key" id="num9">X</div>
+		<div class="key special" id="clear">Del</div>
+		<div class="key special" id="clear-all">AC</div>
+		<div class="key" id="num4">L</div>
+		<div class="key" id="num5">C</div>
+		<div class="key" id="num6">D</div>
+		<div class="key" id="times">&times;</div>
+		<div class="key" id="divide">&divide;</div>
+		<div class="key" id="num1">^</div>
+		<div class="key" id="num2">M</div>
+		<div class="key" id="num3">%</div>
+		<div class="key" id="plus">&plus;</div>
+		<div class="key" id="minus">-</div>
+		<div class="key" id="equals">&equals;</div>
+
+	</div>
+</div>
+  <script>
+var number1 = "placeholder";
+var number2 = "placeholder";
+var currentnum = 'placeholder';
+var operator = '';
+//create a function that translates each numeral into a number and then finds combos of numerals and fixes them
+function translate(number) {
+	var ordered_values = [];
+	var numeral = number.split("");	
+	var i = 0;
+	var c = 0;
+
+	for (var n = 0; n < numeral.length; n++) {
+		if (numeral[i] == "I") {
+			ordered_values.push(1);
+			i++;
+		} else if (numeral[i] == "V") {
+			ordered_values.push(5);
+			i++;
+		} else if (numeral[i] == "X") {
+			ordered_values.push(10);
+			i++;
+		} else if (numeral[i] == "L") {
+			ordered_values.push(50);
+			i++;
+		} else if (numeral[i] == "C") {
+			ordered_values.push(100);
+			i++;
+		} else if (numeral[i] == "D") {
+			ordered_values.push(500);
+			i++;
+		} else if (numeral[i] == "M") {
+			ordered_values.push(1000);
+			i++;
+		}
+	}
+	for (c = 0; c < ordered_values.length; c++) {
+		console.log("we have entered the for loop how many times does this print");
+		if (c === 0) {
+			console.log(c);
+		} else if (ordered_values[c] > ordered_values[c - 1]) {
+				ordered_values[c] = ordered_values[c] - ordered_values[c - 1];
+                ordered_values[c - 1] = 0;
+		} else {
+			console.log("nice");
+		}
+	}
+	console.log(ordered_values);
+	var new_num = Math.round(ordered_values.reduce((a, b) => a + b, 0));
+	console.log(new_num);
+	return new_num;
+}
+//create a function that takes a number and translates it into numerals by subtracting numeral values from largest to smallest
+function retranslate(num) {
+	console.log("we are doing retranslating now");
+	var renumeral = [];
+	while (num > 0) {
+		if (num >= 1000) {
+			num = num - 1000;
+			renumeral.push("M");
+		} else if (num >= 900) {
+			num = num - 900;
+			renumeral.push("C");
+			renumeral.push("M");
+		} else if (num >= 500) {
+			num = num - 500;
+			renumeral.push("D");
+		} else if (num >= 400) {
+			num = num - 400;
+			renumeral.push("C");
+			renumeral.push("D");
+		} else if (num >= 100) {
+			num = num - 100;
+			renumeral.push("C");
+		} else if (num >= 90) {
+			num = num - 90;
+			renumeral.push("X");
+			renumeral.push("C");
+		} else if (num >= 50) {
+			num = num - 50;
+			renumeral.push("L");
+		} else if (num >= 40) {
+			num = num - 40;
+			renumeral.push("X");
+			renumeral.push("L");
+		} else if (num >= 10) {
+			num = num - 10;
+			renumeral.push("X");
+        }else if (num >= 9) {
+            num = num - 9;
+			renumeral.push("I");
+            renumeral.push("X")
+		} else if (num >= 5) {
+			num = num - 5;
+			renumeral.push("V");
+		} else if (num >= 4) {
+			num = num - 4;
+			renumeral.push("I");
+			renumeral.push("V");
+		} else if (num >= 1){
+			num = num - 1;
+			renumeral.push("I");
+		} else {
+            num = 0
+        }
+	}
+	var answer_string = renumeral.join("");
+	return answer_string;
+}
+
+// Assign a click event to all divs with class of key and return the value of the div
+$("div.key").click(function() {
+	var xtext = $(this).text();
+    var screen = document.getElementById("screen");
+    var miniscreen = document.getElementById('miniscreen');
+// create a function that checks for every possible error in roman numerals
+    function error_catcher(string){
+	if(string.includes('IIII') === true ){
+		miniscreen.innerText = 'Error';
+        document.getElementById("julius images").src = './romanculator_files/thumbsdownsmall.png';
+	}else if (string.includes('VV') === true) {
+		miniscreen.innerText = 'Error';
+        document.getElementById("julius images").src = './romanculator_files/thumbsdownsmall.png';
+	}else if (string.includes('LL') === true) {
+		miniscreen.innerText = 'Error';
+        document.getElementById("julius images").src = './romanculator_files/thumbsdownsmall.png';
+	}else if (string.includes('DD') === true) {
+		miniscreen.innerText = 'Error';
+        document.getElementById("julius images").src = './romanculator_files/thumbsdownsmall.png';
+	}else if (string.includes('CCCC') === true) {
+		miniscreen.innerText = 'Error';
+        document.getElementById("julius images").src = './romanculator_files/thumbsdownsmall.png';
+	}else if (string.includes('XXXX') === true) {
+		miniscreen.innerText = 'Error';
+        document.getElementById("julius images").src = './romanculator_files/thumbsdownsmall.png';
+	}else if (string.includes('XCC')) {
+        miniscreen.innerText = 'Error';
+        document.getElementById("julius images").src = './romanculator_files/thumbsdownsmall.png';
+    }else if (string.includes('MMMM') === true) {
+		miniscreen.innerText = 'Error';
+        screen.innerText = 'Numerus Too-Bigicus'
+        document.getElementById("julius images").src = './romanculator_files/thumbsdownsmall.png';
+	}else if (string.includes('IIX') === true) {
+		miniscreen.innerText = 'Error';
+        document.getElementById("julius images").src = './romanculator_files/thumbsdownsmall.png';
+	}else if (string.includes('IIV') === true) {
+		miniscreen.innerText = 'Error';
+        document.getElementById("julius images").src = './romanculator_files/thumbsdownsmall.png';
+	}else if (string.includes('IL') === true) {
+		miniscreen.innerText = 'Error';
+        document.getElementById("julius images").src = './romanculator_files/thumbsdownsmall.png';
+	}else if (string.includes('IC') === true) {
+		miniscreen.innerText = 'Error';
+        document.getElementById("julius images").src = './romanculator_files/thumbsdownsmall.png';
+	}else if (string.includes('ID') === true) {
+		miniscreen.innerText = 'Error';
+        document.getElementById("julius images").src = './romanculator_files/thumbsdownsmall.png';
+	}else if (string.includes('IM') === true) {
+		miniscreen.innerText = 'Error';
+        document.getElementById("julius images").src = './romanculator_files/thumbsdownsmall.png';
+	}else if (string.includes('XXl') === true) {
+		miniscreen.innerText = 'Error';
+        document.getElementById("julius images").src = './romanculator_files/thumbsdownsmall.png';
+	}else if (string.includes('XXC') === true) {
+		miniscreen.innerText = 'Error';
+        document.getElementById("julius images").src = './romanculator_files/thumbsdownsmall.png';
+	}else if (string.includes('XD') === true) {
+		miniscreen.innerText = 'Error';
+        document.getElementById("julius images").src = './romanculator_files/thumbsdownsmall.png';
+	}else if (string.includes('XM') === true) {
+		miniscreen.innerText = 'Error';
+        document.getElementById("julius images").src = './romanculator_files/thumbsdownsmall.png';
+	}else if (string.includes('LC') === true) {
+		miniscreen.innerText = 'Error';
+        document.getElementById("julius images").src = './romanculator_files/thumbsdownsmall.png';
+	}else if (string.includes('LD') === true) {
+		miniscreen.innerText = 'Error';
+        document.getElementById("julius images").src = './romanculator_files/thumbsdownsmall.png';
+	}else if (string.includes('LM') === true) {
+		miniscreen.innerText = 'Error';
+        document.getElementById("julius images").src = './romanculator_files/thumbsdownsmall.png';
+	}else if (string.includes('VX') === true) {
+		miniscreen.innerText = 'Error';
+        document.getElementById("julius images").src = './romanculator_files/thumbsdownsmall.png';
+	}else if (string.includes('VC') === true) {
+		miniscreen.innerText = 'Error';
+        document.getElementById("julius images").src = './romanculator_files/thumbsdownsmall.png';
+	}else if (string.includes('VD') === true) {
+		miniscreen.innerText = 'Error';
+        document.getElementById("julius images").src = './romanculator_files/thumbsdownsmall.png';
+	}else if (string.includes('VM') === true) {
+		miniscreen.innerText = 'Error';
+        document.getElementById("julius images").src = './romanculator_files/thumbsdownsmall.png';
+	}else if (string.includes('DM') === true) {
+		miniscreen.innerText = 'Error';
+        document.getElementById("julius images").src = './romanculator_files/thumbsdownsmall.png';
+	}else if (string.includes('VV') === true) {
+		miniscreen.innerText = 'Error';
+        document.getElementById("julius images").src = './romanculator_files/thumbsdownsmall.png';
+	}else if (string.includes('LL') === true) {
+		miniscreen.innerText = 'Error';
+        document.getElementById("julius images").src = './romanculator_files/thumbsdownsmall.png';
+	}else if (string.includes('VIV') === true) {
+		miniscreen.innerText = 'Error';
+        document.getElementById("julius images").src = './romanculator_files/thumbsdownsmall.png';
+	}else if (string.includes('VIX') === true) {
+		miniscreen.innerText = 'Error';
+        document.getElementById("julius images").src = './romanculator_files/thumbsdownsmall.png';
+	}else if (string.includes('LIC') === true) {
+		miniscreen.innerText = 'Error';
+        document.getElementById("julius images").src = './romanculator_files/thumbsdownsmall.png';
+	}else if (string.includes('LIL') === true) {
+		miniscreen.innerText = 'Error';
+        document.getElementById("julius images").src = './romanculator_files/thumbsdownsmall.png';
+	}else if (string.includes('VID') === true) {
+		miniscreen.innerText = 'Error';
+        document.getElementById("julius images").src = './romanculator_files/thumbsdownsmall.png';
+	}else if (string.includes('VIM') === true) {
+		miniscreen.innerText = 'Error';
+        document.getElementById("julius images").src = './romanculator_files/thumbsdownsmall.png';
+	}else if (string.includes('XIL') === true) {
+		miniscreen.innerText = 'Error';
+        document.getElementById("julius images").src = './romanculator_files/thumbsdownsmall.png';
+	}else if (string.includes('XID') === true) {
+		miniscreen.innerText = 'Error';
+        document.getElementById("julius images").src = './romanculator_files/thumbsdownsmall.png';
+	}else if (string.includes('XIC') === true) {
+		miniscreen.innerText = 'Error';
+        document.getElementById("julius images").src = './romanculator_files/thumbsdownsmall.png';
+	}else if (string.includes('XIC') === true) {
+		miniscreen.innerText = 'Error';
+        document.getElementById("julius images").src = './romanculator_files/thumbsdownsmall.png';
+	}else if (string.includes('LID') === true) {
+		miniscreen.innerText = 'Error';
+        document.getElementById("julius images").src = './romanculator_files/thumbsdownsmall.png';
+	}else if (string.includes('LIM') === true) {
+		miniscreen.innerText = 'Error';
+        document.getElementById("julius images").src = './romanculator_files/thumbsdownsmall.png';
+	}else if (string.includes('LVM') === true) {
+		miniscreen.innerText = 'Error';
+        document.getElementById("julius images").src = './romanculator_files/thumbsdownsmall.png';
+	}else if (string.includes('LCD') === true) {
+		miniscreen.innerText = 'Error';
+        document.getElementById("julius images").src = './romanculator_files/thumbsdownsmall.png';
+	}else if (string.includes('LCM') === true) {
+		miniscreen.innerText = 'Error';
+        document.getElementById("julius images").src = './romanculator_files/thumbsdownsmall.png';
+	}else if (string.includes('IVI') === true) {
+		miniscreen.innerText = 'Error';
+        document.getElementById("julius images").src = './romanculator_files/thumbsdownsmall.png';
+	}else if (string.includes('IXI') === true) {
+		miniscreen.innerText = 'Error';
+        document.getElementById("julius images").src = './romanculator_files/thumbsdownsmall.png';
+	}else {
+        document.getElementById("julius images").src = "./romanculator_files/thumbsupsmall.png";
+	}
+}
+    console.log(screen.innerText)
+	// If the display is zero, do not add the number to it
+	if (screen.innerText == "Nulla" || screen.innerText == 'Overflow Error' ) {
+		screen.innerText = xtext;
+        document.getElementById("julius images").src = "./romanculator_files/thumbsupsmall.png";
+        miniscreen.innerText = translate(screen.innerText)
+	} else {
+		screen.innerText +=xtext;
+        miniscreen.innerText = translate(screen.innerText)
+        error_catcher(screen.innerText)
+    }
+	//
+	if (xtext == "AC") {
+		screen.innerText = "Nulla";
+        miniscreen.innerText = "0";
+        document.getElementById("julius images").src = "./romanculator_files/thumbsupsmall.png";
+	}
+	if (xtext == "Del") {
+        screen.innerText = screen.innerText.slice(0, -4);
+        miniscreen.innerText = translate(screen.innerText);
+        error_catcher(screen.innerText);
+	}
+	if (screen.innerText.length <= 0) {
+		screen.innerText = "Nulla";
+        miniscreen.innerText = "0";
+	}
+
+	// Handle the multiply and divide keys as you can't evaluate those - replace with * and /
+	if (xtext == "\xD7") {
+		screen.innerText = screen.innerText.slice(0, -1); // Remove the &times; symbol
+		number1 = screen.innerText;
+		operator = "*";
+		console.log(operator);
+		screen.innerText = "";
+	} else if (xtext == '%'){
+		screen.innerText = screen.innerText.slice(0, -1); // Remove the &mod; symbol
+		number1 = screen.innerText;
+		operator = "%";
+		screen.innerText = '';
+	}else if (xtext == "\xF7") {
+		screen.innerText = screen.innerText.slice(0, -1); // Remove the &divide; symbol
+		number1 = screen.innerText;
+		operator = "/";
+		screen.innerText = "";
+	} else if (xtext == "-") {
+		screen.innerText = screen.innerText.slice(0, -1); // Remove the &-; symbol
+		number1 = screen.innerText;
+		operator = "-";
+		screen.innerText = "";
+	} else if (xtext == "^") {
+		screen.innerText = screen.innerText.slice(0, -1); // Remove the &^; symbol
+		number1 = screen.innerText;
+		operator = "^";
+		screen.innerText = "";
+	} else if (xtext == "+") {
+		screen.innerText = screen.innerText.slice(0, -1); // Remove the &+; symbol
+		number1 = screen.innerText;
+		operator = "+";
+		screen.innerText = "";
+	}
+	if (xtext == "=") {
+		screen.innerText = screen.innerText.slice(0, -1); // Remove the = symbol
+		number2 = screen.innerText;
+		number1 = translate(number1);
+		number2 = translate(number2);
+		var answer = "";
+				if (operator == '+') {
+			answer = number1+number2;
+		}else if (operator == '-'){
+			answer = number1 - number2;
+		}else if (operator == '/' ){
+			answer = number1/number2;
+		}else if (operator == '*'){
+			answer = number1 * number2;
+		}else if (operator == '^'){
+			answer = Math.pow(number1,number2);
+		}else if (operator == '%'){
+			answer = number1 % number2;
+		}
+		console.log(answer);
+		var answer_string = "";
+		answer_string = retranslate(answer);
+		if (screen.innerText !== 0 || screen.innerText != "Error") {
+			screen.innerText = answer_string;
+            miniscreen.innerText = translate(screen.innerText)
+			error_catcher(screen.innerText)
+		} else {
+			screen.innerText = "Nulla";
+            miniscreen.innerText = "0";
+		}
+	}
+});
+console.log('now we are at the end of the correct script')
+	 </script>
+						<div id="IWS_WH_ZoneRowContainer"><table class="MS_WH_ZoneRow"><tbody><tr><td style="WIDTH: 1%" colspan="1" rowspan="1" class="MS_WH_ZoneSpacing"></td><td valign="top" style="WIDTH: 98%" colspan="1" rowspan="1"><div class="MS_WH_ZoneContent" id="IWS_WH_Zone1"><font size="4" color="#606060"><font size="4" color="#606060"><font size="2" color="#310500"><font color="#310500"><font size="2"><p align="center"><font size="4" color="#606060">RomanCulator&nbsp;Web App<br></font></p></font><p>&nbsp;</p><p align="center"><head>	 <p>&nbsp;</p><p><font size="3">With RomanCulator you can:<br>&nbsp;- Enter Roman numerals and see their value (e.g. XLIX=49)<br>&nbsp;- Add Subtract Multiply and Divide Roman numerals<br>&nbsp;- Receive the wrath or pleasure of Caesar as you type!</font></p><p>&nbsp;</p><p align="center"><font size="3">&nbsp; </font></font></p><font size="3"><font size="2"><p align="left"><br></p></font></font><div align="left"><font size="3">The emperor will guide you with encouragement when your numerals are legal, or with a pitiless thumbs down&nbsp;should you transgress. <p align="left">&nbsp;</p><p align="left">Use the del button to backspace and and the AC button clear the result.</p><p align="left">&nbsp;</p><p align="left"><font size="3">RomanCulator demonstrates how delightfully awful the Roman system was for performing even trivial calculations. </font><font size="3">A simple calculation such as </font><font size="3">XIV + XCIX = CXIII is tricky in your head but easy and fun with RomanCulator.</font></p><p align="center">&nbsp;</p></font></div><div align="center">
+</div><font size="3"><div align="left"><br>We hope you enjoy this app, <a href="./contact.htm">contact us</a> with your suggestions, or leave a note for us on our <a href="./guestbook.htm">guestbook</a>. <div class = 'image' align = ' middle'>
+</div>
+</div><div align="left">&nbsp;</div><div align="center">&nbsp;</div><div align="left">Also of interest -- please take a look at our <a href="./abacus.htm">Abacus page</a> for</div><div align="left">the <u>Roman hand abacus</u>&nbsp;:</div><div align="center"><a href="./abacus.htm"><img src="./romanculator_files/abacus_roman_watercolored_wikipedia_bnf_paris.jpg" style="WIDTH: 220px; HEIGHT: 180px"></a><br>&nbsp;</div></font><p></p><p></p></font></font></font></font></font><p><font size="4" color="#606060"><font size="4" color="#606060"><font size="2" color="#310500"><font color="#310500"><font size="2"></font></font></font></font></font></p><div align="center"><font size="4" color="#606060"><font size="4" color="#606060"><font size="2" color="#310500"><font color="#310500"><font size="2"><font size="3"><span id="span_HtmlControl4"><noscript>
+	Please enable JavaScript to view this page content properly.
+                            
+</noscript>
+<!--begin -->
+<div align="center">
+<a href="./default.htm">
+<img alt="Retro Calculator Logo -- Retro Calculators Mechanical Adding Machines and Mechanical Adders" src="./romanculator_files/Retro_Calculator_Logo_Retro_Calculators.bmp"></a>
+<br>
+<font color="#310500" size="3">
+<a href="./default.htm">
+RetroCalculators Home
+</a>
+</font>
+</div>
+<script type="text/javascript">
+var head = parent.document.getElementsByTagName("head")[0];
+var favicon = parent.document.createElement("link");
+favicon.rel = ("shortcut icon");
+favicon.href = ("./common_files/favicon.ico");
+head.appendChild(favicon);
+</script>
+<!--end   -->
+</span></font></font></font></font></font></font></div></div></td><td style="WIDTH: 1%" colspan="1" rowspan="1" class="MS_WH_ZoneSpacing"></td></tr></tbody></table></div>
+					</div>
+				</td>
+			</tr></tbody></table>
+			</td>
+		</tr>
+		
+		<tr>
+			<td id="IWS_WH_Elem_Footer" colspan="2" class="MS_MasterFooter">
+				<div class="MSC_FooterFrame">
+					<span id="IWS_WH_Elem_FooterLinks">
+						
+					</span>
+					<div id="IWS_WH_Elem_FooterText" class="MSC_FooterText">
+						All rights reserved
+					</div>
+				</div>
+			</td>
+		</tr>
+<tr id="ctl00_IWS_WH_Elem_Logo">
+	<td id="ctl00_IWS_WH_Elem_BottomAd" class="MS_MasterBottomAD" style="padding-top:2px">
+			    
+			</td>
+</tr>
+
+	</tbody></table>
+</form>
+
+</body> </html>

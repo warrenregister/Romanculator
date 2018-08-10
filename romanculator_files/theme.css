@@ -1,0 +1,562 @@
+﻿.BG_Base {
+  background-color: #436c99;
+}
+.BG_VeryLight {
+  background-color: #ffffff;
+}
+.BG_Light {
+  background-color: #d1e4fa;
+}
+.BG_Mid {
+  background-color: #638cbb;
+}
+.BG_Dark {
+  background-color: #325884;
+}
+.BG_VeryDark {
+  background-color: #000000;
+}
+.BG_CompLight {
+  background-color: #e3fae7;
+}
+.BG_CompMid {
+  background-color: #78aa84;
+}
+.BG_CompDark {
+  background-color: #4e805a;
+}
+
+.F_VeryLight {
+  color: #ffffff;
+}
+.F_Light {
+  color: #d1e4fa;
+}
+.F_Mid {
+  color: #638cbb;
+}
+.F_Dark {
+  color: #325884;
+}
+.F_VeryDark {
+  color: #000000;
+}
+.F_CompLight {
+  color: #e3fae7;
+}
+.F_CompMid {
+  color: #78aa84;
+}
+.F_CompDark {
+  color: #4e805a;
+}
+
+body{
+font-family: 'Roboto Mono', ;
+
+/* The below makes sure the user cant accidentally select something and turn it blue */
+ -webkit-touch-callout: none;
+ -webkit-user-select: none;
+ -khtml-user-select: none;
+ -moz-user-select: none;
+ -ms-user-select: none;
+ user-select: none;
+ background: #436c99;
+}
+
+.MS_MasterFrame {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+td,
+th {
+  font-family: Arial, Geneva, sans-serif;
+  font-size: 18pt;
+}
+
+.MSC_SiteWidth,
+.MS_MasterHeader,
+.MS_MasterFrame,
+.MS_MasterGlobalLinks,
+.MS_MasterHeader,
+.MS_MasterPrimaryNav,
+.MS_MasterFooter,
+.MS_MasterTopAD,
+.MS_MasterBottomAD {
+  width: 780px;
+}
+
+.MSC_HeaderFrame {
+  background: #325884;
+  width: 100%;
+}
+
+.MSC_HeaderDescription {
+  font-size: 12px;
+  margin: 0px;
+}
+
+.MSC_GlobalLinkSpace {
+  padding: 10px;
+  font-size: 10pt;
+  color: #ffffff;
+}
+.MSC_GlobalLink {
+  font-size: 10pt;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.MSC_GlobalLink:hover {
+  font-size: 10pt;
+  color: #ffffff;
+  text-decoration: underline;
+  font-weight: bold;
+}
+.MSC_GlobalLink:visited {
+  font-size: 10pt;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.MSC_GlobalLinkSpace {
+  font-size: 10pt;
+}
+
+.MSC_PrimaryNavFrame {
+  background: #638cbb;
+  width: 100%;
+  margin: 1px 0px 5px 0px;
+  text-align: left;
+}
+.MSC_PrimaryNavLink {
+  color: #ffffff;
+  font-size: 12px;
+  text-decoration: none;
+}
+.MSC_PrimaryNavLink:hover {
+  color: #ffffff;
+  font-size: 12px;
+  text-decoration: underline;
+}
+.MSC_PrimaryNavLink:visited {
+  color: #ffffff;
+  font-size: 12px;
+  text-decoration: none;
+}
+.MSC_PrimaryNavLinkFrame-On {
+  background: #e3fae7;
+  white-space: nowrap;
+  padding: 5px 10px 5px 10px;
+}
+.MSC_PrimaryNavLink-On {
+  color: #325884;
+  font-size: 12px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.MSC_PrimaryNavLink-On:hover {
+  color: #325884;
+  font-size: 12px;
+  text-decoration: underline;
+  font-weight: bold;
+}
+.MSC_PrimaryNavLink-On:visited {
+  color: #325884;
+  font-size: 12px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.MSC_PrimaryNavLeftSpace {
+  width: 1px;
+  white-space: nowrap;
+  background: #000000;
+  font-size: 1px;
+}
+.MSC_PrimaryNavRightSpace {
+  width: 1px;
+  background: #d1e4fa;
+  white-space: nowrap;
+  font-size: 1px;
+}
+.MSC_PrimaryNavTopSpace {
+  height: 1px;
+  background: #000000;
+}
+.MSC_PrimaryNavBottomSpace {
+  height: 1px;
+  background: #d1e4fa;
+}
+
+.MS_MasterLeftNav {
+  background: #d1e4fa;
+}
+.MSC_SecondaryNavFrame {
+  background: #e3fae7;
+  width: 100%;
+  text-align: left;
+}
+.MSC_SecondaryNavLink {
+  color: #325884;
+  font-size: 10pt;
+  text-decoration: none;
+}
+.MSC_SecondaryNavLink:hover {
+  color: #325884;
+  font-size: 10pt;
+  text-decoration: underline;
+}
+.MSC_SecondaryNavLink:visited {
+  color: #325884;
+  font-size: 10pt;
+  text-decoration: none;
+}
+.MSC_SecondaryNavLeftSpace {
+  font-size: 1px;
+  background: #638cbb;
+  width: 1px;
+  white-space: nowrap;
+}
+.MSC_SecondaryNavRightSpace {
+  font-size: 1px;
+  background: #ffffff;
+  width: 1px;
+  white-space: nowrap;
+}
+.MSC_SecondaryNavTopSpace {
+  background: #638cbb;
+  height: 1px;
+}
+.MSC_SecondaryNavBottomSpace {
+  background: #ffffff;
+  height: 1px;
+}
+.MSC_SecondaryNavLeftFrame-On {
+  padding: 5px;
+  background: #ffffff;
+}
+.MSC_SecondaryNavLinkFrame-On {
+  white-space: nowrap;
+  padding: 5px;
+  background: #ffffff;
+}
+.MSC_SecondaryNavLink-On {
+  padding: 5px;
+  background: #ffffff;
+  font-size: 10pt;
+  font-weight: bold;
+  color: #325884;
+  text-decoration: none;
+}
+.MSC_SecondaryNavLink-On:hover {
+  padding: 5px;
+  background: #ffffff;
+  font-size: 10pt;
+  font-weight: bold;
+  color: #325884;
+  text-decoration: underline;
+}
+.MSC_SecondaryNavLink-On:visited {
+  padding: 5px;
+  background: #ffffff;
+  font-size: 10pt;
+  font-weight: bold;
+  color: #325884;
+  text-decoration: none;
+}
+
+.MS_MasterBody {
+  background: #ffffff;
+}
+.MSC_Body {
+  padding: 10px;
+  text-align: left;
+  background: #ffffff;
+  height: 100%;
+}
+
+.MSC_FooterFrame {
+  background: #325884;
+  padding: 5px;
+  text-align: center;
+}
+.MSC_FooterLink {
+  color: #ffffff;
+  font-size: 10pt;
+  text-decoration: none;
+}
+.MSC_FooterLink:hover {
+  color: #ffffff;
+  font-size: 10pt;
+  text-decoration: underline;
+}
+.MSC_FooterLink:visited {
+  color: #ffffff;
+  font-size: 10pt;
+  text-decoration: none;
+}
+.MSC_FooterLinkSpacer {
+  color: #ffffff;
+  font-size: 10pt;
+}
+.MSC_FooterText {
+  color: #ffffff;
+  font-size: 10pt;
+}
+
+.MSSB_ProductTitle {
+  color: #325884;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.MSSB_ProductTitle:hover {
+  color: #ba2a2d;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.MSSB_ProductTitle:visited {
+  color: #325884;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.MSSB_Price {
+  color: #4e805a;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.MSSB_ProductDescription {
+  font-size: 10pt;
+}
+.MSSB_ProductDetailLink {
+  font-family: Arial, Geneva, sans-serif;
+  color: #325884;
+  text-decoration: none;
+}
+.MSSB_ProductDetailLink:hover {
+  font-size: 10pt;
+  color: #ba2a2d;
+  text-decoration: underline;
+  padding: 5px;
+}
+.MSSB_ProductDetailLink:visited {
+  font-size: 10pt;
+  color: #325884;
+  text-decoration: none;
+}
+.MSSB_PurchaseButton {
+  font-size: 10pt;
+}
+.MSSB_CartButton {
+  font-size: 10pt;
+}
+.MSSB_ShortDescription {
+  font-size: 10pt;
+  text-decoration: none;
+  padding: 5px;
+}
+.MSSB_LongDescription {
+  font-size: 10pt;
+  text-decoration: none;
+}
+.MSSB_RegularPrice {
+  font-size: 10pt;
+  text-decoration: none;
+}
+.MSSB_PromoText {
+  font-size: 10pt;
+  text-decoration: none;
+}
+.MSSB_SKU {
+  font-size: 10pt;
+  text-decoration: none;
+}
+.MSSB_ProductBodyText {
+  font-size: 10pt;
+}
+.MSSB_ProductHeader {
+  font-size: 21px;
+}
+.MSSB_ProductOptionTitle {
+  font-size: 12px;
+  font-weight: bold;
+}
+.MSSB_ProductOptions {
+  font-size: 12px;
+}
+.MSSB_BreadcrumbLink {
+  font-size: 12px;
+  color: #325884;
+  text-decoration: none;
+}
+.MSSB_BreadcrumbLink:hover {
+  font-size: 12px;
+  color: #ba2a2d;
+  text-decoration: underline;
+}
+.MSSB_BreadcrumbLink:visited {
+  font-size: 12px;
+  color: #325884;
+  text-decoration: none;
+}
+.MSSB_BreadcrumbSpacer {
+  font-size: 12px;
+  margin: 0px 5px 0px 5px;
+}
+.MSSB_ProductRowSpacer {
+  background: #cccccc;
+}
+.MSSB_ProductOptions {
+  font-size: 10pt;
+}
+
+.MSC_CollectDataTable,
+.MSC_CollectDataTable {
+  font-size: 10pt;
+}
+
+.MSC_DisplayDataTable,
+.MSC_DisplayDataTable td {
+  font-size: 10pt;
+  border: 1px solid #f4f4f4;
+  border-collapse: collapse;
+}
+.MSC_DisplayDataTable th {
+  background-color: #d1e4fa;
+  font-weight: bold;
+  font-size: 12px;
+  color: #325884;
+  padding: 3px;
+  border: 1px solid #638cbb;
+}
+.MSC_DisplayDataTable {
+  border-collapse: collapse;
+  border: 1px solid #638cbb;
+}
+.MSC_DisplayDataTable td {
+  border-collapse: collapse;
+  border: 1px solid #638cbb;
+  padding: 3px;
+}
+.MSC_DisplayDataTableHeader {
+  font-weight: bold;
+  font-size: 12px;
+  color: #000000;
+  margin-bottom: 3px;
+}
+.MSC_DisplayDataRepeatingForm table td hr {
+  color: #638cbb;
+  height: 1px;
+}
+
+.MSC_ECBorder {
+  border-color: #638cbb;
+}
+
+.image{
+margin: 0;
+width: 400;
+height: 463;
+overflow: hidden;
+align-content: center;  
+padding-left: 190px;
+
+}
+.wrapper{
+width: 400px;
+margin: 0 auto;
+background-color: #5E260F;
+height: 500;
+text-align: center;
+color: white;
+padding-top:3px;
+border-radius: 20px;
+bottom: 10px;
+align-content: left;
+font-family: 'Times New Roman', sans-serif ;
+}
+
+#screen{
+width: 90%;
+background-color: #b0b78e;
+border: 1px solid black;
+margin: 0 auto;
+line-height: 2;
+text-align:center;
+font-size: 40;
+padding: 0 0px 0px 0;
+height: 40px;
+font-family: 'Times New Roman', sans-serif ;
+}
+.miniscreen{
+width:20%;
+background-color: #b0b78e;
+border: 1px solid black;
+margin-left: 19px;
+margin-bottom: 5px;
+padding-left: 15px;
+line-height: 2;
+text-align:right;
+font-size: 40;
+text-shadow: 0px 1px 1px #4d4d4d;
+padding: 0px 10px 20px 0px;
+height: 20px;
+font-family: 'Times New Roman', sans-serif ;
+}
+
+.keypad{
+width: 90%;
+height: 220px;
+margin: 10px auto;
+margin-bottom: 15px;
+display:flex;
+background-color:tan;
+justify-content: space-between;
+flex-wrap: wrap;
+background-color: burlywood;
+padding: 5px;
+border-radius: 5px;
+}
+
+.key{
+background-color: #404133;
+border: 3px solid black;
+border-radius: 3px;
+width: 60px;
+height: 50px;
+line-height: 50px;
+color: white;
+font-size: 1.5em;
+font: 'Museo700';
+text-shadow: 3px 3px 0px #2c2e38, 2px 2px 0px #5c5f72;	 }
+
+.key:hover{
+background-color: #303123;
+cursor: pointer; cursor: hand;
+}
+
+.special{
+background-color: #c8953c;
+}
+
+.special:hover{
+background-color: #b8852c;
+}
+
+#equals{
+width: 353px;
+height: 40px;
+background-color: black;
+font-size: 3em;
+font: 'Museo700';
+text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+}
+
+#equals:hover{
+background-color: red;
+}
